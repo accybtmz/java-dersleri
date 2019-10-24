@@ -1,4 +1,4 @@
-package javayaGiris;
+package chapter1;
 
 public class HelloWorld {
 	
