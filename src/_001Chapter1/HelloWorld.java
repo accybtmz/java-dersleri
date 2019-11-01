@@ -1,4 +1,4 @@
-package chapter1;
+package _001Chapter1;
 
 public class HelloWorld {
 	
