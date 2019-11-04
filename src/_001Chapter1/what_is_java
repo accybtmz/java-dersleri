@@ -1,8 +1,63 @@
-* Java platformdan bağımsız bir dildir.
+ * Java platformdan bağımsız bir dildir.
+    
     Diyelim ki X bir dille uygulama geliştirdiniz. geliştirdiğiniz bu uygulama sadece bir işletim sistemi üzerinde çalışabiliyor.
     Hem Linux üzerinde hem Mac üzerinde hem de windows üzerinde çalışamıyordu.
     Java bu platform bağlılığını ortadan kaldırmıştır. Yani siz uygulamanızı Java ile geliştirdiyseniz Bunu hem linux üzerinde 
     hem windows üzerinde ve tüm farklı işletim sistemleri üzerinde çalıştırabiliyorsunuz.
+    
+ * Java Kodu Nasıl derlenir ?
+    
+    Java uzantılı kaynak kodlar, ilk aşamada bir derleyici tarafından derlendikten sonra bir byte koda dönüştürülüyor. bu byte kodların uzantisı ise .class
+    Daha sonra bu byte kodlar ikinci aşamada bir yorumlayıcıdan geçiyor ve biz bu byte kodları farklı işletim sistemleri üzerinde yorumlayarak dilediğimiz
+    işletim sisteminde çalıştırabilir hale geliyoruz. bu kodları işletim sistemi üzerinde çalıştırabilmemiz için o işletim sistemine ait bir JVM'nin kurulu 
+    olması gerekiyor. Çünkü bu byte kodları JVM yorumluyor. Java diğer dillereden farklı olarak hem derlenen hemde yorumlanan bir dildir. Ve sonuç olarak 
+    her işletim sistemi için hazırlanmış JVM'ler sayesinde Java Platform Independence(Platform bağımsız) özelliğini kazanmış oluyor.
+    
+    JDK, JRE,JVM ?
+    
+    JDK(Java Development Kit) --> Java ile uygulama geliştirmek için geçerlidir.
+    JRE (Java Runtime Envoirement) --> Java uygulamaları çalıştırmak için geçerlidir.
+    
+    
+    JDK = JVM + JRE
+    
+ * Java Main Method nedir ?
+ 	
+ 	main() metot, Java’da temel uygulamaların başlangıç noktasıdır. Özellikle konsol uygulamalarında kullanılır. 
+ 	JVM, Java programını çalıştırmaya main() metottan başlar. main() metodunu çalıştıran thread’in ismi de main thread’tir.
+ 
+ * Main metod overload edilir mi ?
+ 
+ 	Evet edebiliriz bunda bir sakınca yoktur. Fakat JVM yine 'public static void main(String[] args)' imzalı metodu çağıracaktır.
+ 	Bir metodun imzası, isim ve parametre listesinden (tipleri ve sayısı) oluşur. İmzaya dönüş tipi dahil değildir.
+ 	Sonuç olarak 'public static void main(String[] args, int i)' şeklinde main metodu overload edebiliriz.
+ 	
+ * main metod override edilir mi ?
+  
+     Hayır edemezsiniz. Java, static bir metodu override etmeye izin vermez. Çünkü Java’da static metotlar derleme zamanında bind edilir.(bağlanır). 
+     Eğer siz bir alt sınıfta üst sınıfta bulunan static bir metodu aynı ad ve imza ile implement ederseniz, 
+     üst sınıftaki static metodu alt sınıf için saklamış olursunuz.
+ 	 	
+ * main() metot final olabilir mi ?
+ 	 
+ 	 Evet olabilir. Fakat final anahtar kelimesiyle nitelenen metodlar da override edilemezler.
+ 	 
+ * static olmayan bir metot main() metot içerisinden nasıl çağırılır ?
+     
+     Bu soru tüm static metotlar ve static olmayan (non-static) metodlar için sorulabilir. 
+     Sorunun genel hali, bir static metot içerisinden static olmayan bir metot nasıl çağırılır? şeklindedir.
+     static olmayan metoları, static metotlar içerisinden doğrudan çağıramayız. 
+     Çağırmak için static metodun içerisinde, static olmayan metodun ait olduğu sınıftan bir nesne üretip
+     o nesnenin üzerinden static olmayan metoda ulaşmamız gereklidir. 
+     static bir metod diğer statitic metodu direk çağırabilir.
+     Ayrıca yine static olmayan bir metod static metodu direk çağrabilr.
+ 	 	 
+ 	 	
+ 	
+ 	
+ 	   
+      
+    
     
     
     
