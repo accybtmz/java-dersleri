@@ -1,0 +1,8 @@
+* Java platformdan bağımsız bir dildir.
+    Diyelim ki X bir dille uygulama geliştirdiniz. geliştirdiğiniz bu uygulama sadece bir işletim sistemi üzerinde çalışabiliyor.
+    Hem Linux üzerinde hem Mac üzerinde hem de windows üzerinde çalışamıyordu.
+    Java bu platform bağlılığını ortadan kaldırmıştır. Yani siz uygulamanızı Java ile geliştirdiyseniz Bunu hem linux üzerinde 
+    hem windows üzerinde ve tüm farklı işletim sistemleri üzerinde çalıştırabiliyorsunuz.
+    
+    
+    
