@@ -1,4 +1,4 @@
-package _001Chapter1;
+package chapter01.alistirmalar;
 
 public class HelloWorld {
 	
