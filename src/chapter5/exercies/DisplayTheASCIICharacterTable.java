@@ -5,7 +5,7 @@ package chapter5.exercies;
 the ASCII character table from ! to ~. Display ten characters per line. The ASCII
 table is shown in Appendix B. Characters are separated by exactly one space.
 */
-public class isplayTheASCIICharacterTable {
+public class DisplayTheASCIICharacterTable {
 	public static void main(String[] args) {
 		// Number of characters per line
 		final int NUMBER_OF_CHARACTERS_PER_LINE = 10;
